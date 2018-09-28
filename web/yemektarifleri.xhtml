@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html   xmlns="http://www.w3.org/1999/xhtml" lang="en" 
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        >
+    
+  <h:head>
+    <meta content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="assets/ico/favicon.ico" />
+    <title>
+      Az Kalorili ve Sağlıklı Yemek Tarifleri
+    </title>
+    <!--  Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!--  Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="assets/js/modernizr.js" type="text/javascript"
+   ></script>
+  </h:head>
+    
+    
+    
+    
+  <h:body>
+    <!--  Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle"> <span
+          class="sr-only">Toggle navigation</span> <span
+          class="icon-bar"></span> <span class="icon-bar"></span>
+          <span class="icon-bar"></span> </button> <a
+          class="navbar-brand" href="index.xhtml">onlinediyet.com</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="index.xhtml">ANASAYFA</a>
+            </li>
+            <li>
+              <a href="hakkimizda.xhtml">HAKKIMIZDA</a>
+            </li>
+            <li>
+              <a href="diyetisyenler.xhtml">DİYETİSYENLERİMİZ</a>
+            </li>
+            
+            <li>
+              <a href="mobil.xhtml">MOBİL UYGULAMA</a>
+            </li>
+            <li>
+              <a href="iletisim.xhtml">İLETİŞİM</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">DİĞER <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="haftaninonerisi.xhtml">HAFTANIN ÖNERİSİ</a>
+                </li>
+                <li>
+                  <a href="kitleindeksi.xhtml">VÜCUT KİTLE İNDEKSİ HESAPLAMA</a>
+                </li>
+                <li>
+                  <a href="kaloriihtiyaci.xhtml">GÜNLÜK KALORİ İHTİYACI HESAPLAMA</a>
+                </li>
+                <li>
+                  <a href="hangibesinkackalori.xhtml">HANGİ BESİN KAÇ KALORİ ?</a>
+                </li>
+                <li>
+                  <a href="yemektarifleri.xhtml">YEMEK TARİFLERİ</a>
+                </li>
+                
+              </ul>
+            </li>
+           <li>
+              <a href="login.xhtml">GİRİŞ</a>
+            </li>
+            <li>
+              <a href="signup.xhtml">KAYIT OL</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    <!-- 
+      *****************************************************************************************************************
+      BLUE WRAP
+      ***************************************************************************************************************** -->
+    <div id="blue">
+      <div class="container">
+        <div class="row">
+          <h3>
+             Az Kalorili ve Sağlıklı Yemek Tarifleri
+          </h3>
+        </div>
+        <!--  /row -->
+      </div>
+      <!--  /container -->
+    </div>
+    
+    
+    
+    
+    
+    <!--  /blue -->
+    <!-- 
+      *****************************************************************************************************************
+      AGENCY ABOUT
+      ***************************************************************************************************************** -->
+    <div class="container mtb">
+      <div class="row">
+          <center><img class="img-responsive" src="assets/img/yemektarifleri.jpg" alt="" /></center>
+     
+          <center><h1>Tatlı Tarifleri</h1></center>
+                  <center>
+                  <h:dataTable styleClass="table table-hover" 
+                               value="#{bean.sweetTarif}" var="sw">
+            <h:column>
+                <f:facet name="İSİM">
+              
+                </f:facet>
+                <center><h:outputText value="#{sw.NAME}"></h:outputText></center>
+            </h:column>
+            <h:column>
+               <f:facet name="TARİFİ">
+                
+               </f:facet>
+                <center> <h:outputText value="#{sw.INFO}"></h:outputText></center>
+            </h:column>
+            
+        </h:dataTable>
+        
+          </center>
+           <center><h1>Ana Yemek Tarifleri</h1></center>
+                  <center>
+                  <h:dataTable  styleClass="table table-hover" 
+                               value="#{bean.maincourseTarif}" var="mc">
+                       <h:column>
+                <f:facet name="İSİM">
+              
+                </f:facet>
+                 <center>  <h:outputText value="#{mc.NAME}"></h:outputText></center>
+                       </h:column>
+            <h:column>
+               <f:facet name="TARİFİ">                
+               </f:facet>
+              <center>  <h:outputText value="#{mc.INFO}"></h:outputText></center>
+                
+            </h:column>
+            
+        </h:dataTable>
+   
+         
+          </center>
+           
+            <center><h1>Meyve-Sebzeli Pratik Lezzet Tarifleri</h1></center>
+           
+          <center>
+                  <h:dataTable  styleClass="table table-hover" 
+                               value="#{bean.fruitvegTarif}" var="fv">
+            <h:column>
+                <f:facet name="İSİM">
+              
+                </f:facet>
+                <center>  <h:outputText value="#{fv.NAME}"></h:outputText> </center>
+            </h:column>
+            <h:column>
+               <f:facet name="TARİFİ">
+                
+               </f:facet>
+                <center>   <h:outputText value="#{fv.INFO}"></h:outputText> </center>
+            </h:column>
+            
+        </h:dataTable>
+        </center>
+        </div>
+      </div>
+   
+    
+    
+    
+    
+     
+     
+     
+     
+     <!-- 
+      *****************************************************************************************************************
+      TESTIMONIALS
+      ***************************************************************************************************************** -->
+   
+  
+     
+     
+     
+     
+     
+     
+     
+     <!-- 
+      *****************************************************************************************************************
+      OUR CLIENTS
+      ***************************************************************************************************************** -->
+ 
+     
+     <!-- 
+      *****************************************************************************************************************
+      FOOTER
+      ***************************************************************************************************************** -->
+    <div id="footerwrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+          
+          </div>
+          <div class="col-lg-4">
+            <h4>
+         Sosyal Medya Hesaplarımız
+            </h4>
+            <div class="hline-w"></div>
+            <p>
+              <a href="#"><i class="fa fa-dribbble"></i></a>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a> <a
+              href="#"><i class="fa fa-instagram"></i></a> <a
+              href="#"><i class="fa fa-tumblr"></i></a>
+            </p>
+          </div>
+          
+        </div>
+       
+      </div>
+      
+    </div>
+  
+     
+     
+     
+     
+     <!--  Bootstrap core JavaScript
+      ================================================== -->
+     <!--  Placed at the end of the document so the pages load faster -->
+     <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+    type="text/javascript" ></script> 
+     <script
+    src="assets/js/bootstrap.min.js" type="text/javascript" ></script>
+     <script
+    src="assets/js/retina-1.1.0.js" type="text/javascript" ></script>
+     <script
+    src="assets/js/jquery.hoverdir.js" type="text/javascript"
+    ></script> 
+     <script
+    src="assets/js/jquery.hoverex.min.js" type="text/javascript"
+    ></script> 
+     <script
+    src="assets/js/jquery.prettyPhoto.js" type="text/javascript"
+    ></script> 
+     <script
+    src="assets/js/jquery.isotope.min.js" type="text/javascript"></script> 
+     <script src="assets/js/custom.js"
+    type="text/javascript" ></script>
+  </h:body>
+</html>

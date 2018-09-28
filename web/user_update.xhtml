@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        
+        
+         <h:form>
+     <h1>Profil sayfası</h1>
+            <h:panelGrid columns="3">
+            <h:outputText value="Adınız:"/>
+                <h:outputText value="#{bean.firstName}"/>
+                 <br/>
+            <h:outputText value="Soyadınız:"/>
+                 <h:outputText value="#{bean.lastName}"/>
+                  <br/>
+            <h:outputText value="Email:"/>
+                <h:outputText value="#{bean.email}"/>
+                <br/>
+            <h:outputText value="Parolanız:"/>
+                <h:outputText value="#{bean.password}"/>
+                <br/>
+            <h:outputText value="Yaşınız:"/>
+                <h:outputText value="#{bean.age}"/>
+                <br/>
+            <h:outputText value="Boyunuz:"/>
+                <h:outputText value="#{bean.height}"/>
+                <br/>
+            <h:outputText value="Kilo"/>
+                <h:outputText value="#{bean.weight}"/>
+                <br/>
+            
+            <h:outputText value="Telefon Numaranız: "/>
+                <h:outputText value="#{bean.phone}"/>
+        
+       
+            </h:panelGrid>
+    
+</h:form>
+        
+        
+        
+        
+        
+        
+        
+        <br/>
+        <br/>
+        
+        
+        
+        
+        
+        
+        <h:form>
+     <h1>Kayıt</h1>
+            <h:panelGrid columns="3">
+            <h:outputText value="Adınız:"/>
+            <h:inputText value="#{bean.firstName}"/>
+            
+            <h:outputText value="Soyadınız:"/>
+            <h:inputText value="#{bean.lastName}"/>
+            
+            <h:outputText value="Email:"/>
+            <h:inputText value="#{bean.email}" />
+            
+            
+            <h:outputText value="Parolanız:"/>
+             <h:inputText value="#{bean.email}" />
+           
+            
+            <h:outputText value="Yaşınız:"/>
+            <h:inputText value="#{bean.age}" />
+            <br/>
+            <h:outputText value="Boyunuz:"/>
+            <h:inputText value="#{bean.height}" />
+            <br/>
+            <h:outputText value="Kilo"/>
+            <h:inputText value="#{bean.weight}" />
+            
+            <h:outputText value="Telefon Numaranız"/>
+            <h:inputText value="#{bean.phone}" />
+           
+            </h:panelGrid>
+            <h:commandButton value="Kayıt ol" action="#{bean.save}"/>
+    
+</h:form>
+        
+        
+        
+        
+        
+        
+        
+        
+    </h:body>
+</html>
